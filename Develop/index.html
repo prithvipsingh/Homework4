@@ -1,0 +1,37 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css"/>
+</head>
+
+<body>
+    <div id="container">
+        <a href="highscore.html">View highscore</a>
+        <div id="counter"></div>
+        <button id="start">Start Quiz</button>
+        <div id="quiz">
+            <div id="question"></div>
+            <div id="choices">
+                <button class="choice" id="A" onclick="checkAnswer('A')"></button>
+                <button class="choice" id="B" onclick="checkAnswer('B')"></button>
+                <button class="choice" id="C" onclick="checkAnswer('C')"></button>
+            </div>
+            <h4 id="correct" style="display: none;">Correct!</h4>
+        </div>
+        <div id="result" style="display: none;">
+            <h1> All Done!</h1>
+            <h3> Your final Score is <span id="score"></span></h3>
+            <form>
+                <label for="initials">Initials: </label>
+                <input type="text" id="initials" name="initials">
+                <button id="submit">Submit</button> 
+            </form>
+        </div>
+        <script src="script.js"></script>
+    </div>
+</body>
+
+</html>

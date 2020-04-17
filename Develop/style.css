@@ -1,0 +1,39 @@
+#container{
+    background-color: aquamarine;
+    margin-left: 80px;
+    width: 800px;
+    height: 400px;
+    text-align: center;
+}
+ #choices{
+    display: none;
+}
+#counter{
+    font-size: 40px;
+    color: cornflowerblue;
+    margin-left: 40px;
+    margin-top: 40px;
+}
+#start{
+    font-size: 20px;
+    text-align: center;
+    margin-left: 30px;
+    margin-top: 40;
+}
+#question{
+    font-size: 30px;
+    color: red;
+}
+.choice {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;   
+    margin-left: 30px;
+    margin-bottom: 20px;
+    margin-top: 10px;
+  } 
