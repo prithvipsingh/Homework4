@@ -9,7 +9,13 @@
 
 <body>
     <div id="container">
-        <a href="highscore.html">View highscore</a>
+        <a class="highscore" href="highscore.html">View Highscore</a>
+        <p>This multilple choice quiz game about how much do you know about Australia, 
+            It has 10 questions and you need to finish in 75 seconds.
+            The rule is every wrong answer, 5 second will substract. 
+            In the end game you can submit your enitials and score and you can see your score.
+            Highscore, compare scores of all participates.  
+        </p>
         <div id="counter"></div>
         <button id="start">Start Quiz</button>
         <div id="quiz">
@@ -20,6 +26,7 @@
                 <button class="choice" id="C" onclick="checkAnswer('C')"></button>
             </div>
             <h4 id="correct" style="display: none;">Correct!</h4>
+            <h4 id="incorrect" style="display: none;">Incorrect!</h4>
         </div>
         <div id="result" style="display: none;">
             <h1> All Done!</h1>

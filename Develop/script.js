@@ -7,6 +7,8 @@ var choiceB = document.getElementById("B");
 var choiceC = document.getElementById("C");
 var count = document.getElementById("counter");
 var result = document.getElementById("result");
+var correct = document.getElementById("correct");
+var incorrect = document.getElementById("incorrect");
 
 //  create questions in Array objects
 var questions = [
@@ -120,19 +122,27 @@ function renderCounter() {
 
 // check answer function
 function checkAnswer(answer) {
-  runningQuestion++;
-  if (runningQuestion < questions.length) {
+  if (runningQuestion <questions.length) {
     if (answer !== questions[runningQuestion].correct) {
-      correct.style.display = "block";
+      console.log("inside");
+      console.log(answer);
+      console.log(questions[runningQuestion].correct);
+      console.log(runningQuestion);
+      incorrect.style.display = "block";
+      correct.style.display = "none";
       count = count - 5;
+    } else{
+      correct.style.display = "block";
+      incorrect.style.display = "none";
     }
+    runningQuestion++;
     renderQuestion();
   } else {
     clearInterval(Timer);
     showResult();
   }
+  
 }
-
 // Show result function
 function showResult() {
   quiz.style.display = "none";
@@ -140,7 +150,7 @@ function showResult() {
   var score = document.getElementById("score");
   score.innerHTML = count;
 }
-
+// submit function event listener
 document.getElementById("submit").addEventListener("click", function (event) {
   event.preventDefault();
   var newInitials = document.getElementById("initials").value;
