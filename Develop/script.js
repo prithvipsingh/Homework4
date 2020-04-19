@@ -100,7 +100,7 @@ function startQuiz() {
   Timer = setInterval(renderCounter, 1000);
 }
 
-// render a question
+  // render a question function 
 function renderQuestion() {
   var q = questions[runningQuestion];
   question.innerHTML = "<p>" + q.question + "</p>";
@@ -108,8 +108,7 @@ function renderQuestion() {
   choiceB.innerHTML = q.choiceB;
   choiceC.innerHTML = q.choiceC;
 }
-
-// counter render function
+ //render counter  function
 function renderCounter() {
   if (count > 0) {
     counter.innerHTML = count;
@@ -124,10 +123,6 @@ function renderCounter() {
 function checkAnswer(answer) {
   if (runningQuestion <questions.length) {
     if (answer !== questions[runningQuestion].correct) {
-      console.log("inside");
-      console.log(answer);
-      console.log(questions[runningQuestion].correct);
-      console.log(runningQuestion);
       incorrect.style.display = "block";
       correct.style.display = "none";
       count = count - 5;
